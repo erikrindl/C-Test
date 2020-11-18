@@ -35,15 +35,31 @@ namespace GitDemo
             Console.WriteLine(arrayOfNumbers.Contains(3));
             */
 
-            int[] firstOne = new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            /*int[] firstOne = new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             int[] secondOne = new int[10] {10 , 9, 8, 7, 6, 5, 4, 3, 2, 1};
             Console.WriteLine(string.Join(',', firstOne));
             Console.WriteLine(string.Join(',', secondOne));
 
             Console.WriteLine(string.Join(',', firstOne));
             Console.WriteLine(string.Join(',', firstOne.Reverse()));
+            */
 
+            string[] stringArray = new string[] { "Jan", "Feb", "Mar", "Apr", "Maj", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dec" };
 
+            string number;
+            int choice;
+
+            do
+            {
+                Console.WriteLine("Select a number from 1 to 12.");
+                number = Console.ReadLine();
+                choice = Convert.ToInt32(number);
+                if (choice <= 12)
+                {
+                    Console.WriteLine(stringArray[choice - 1]);
+                }
+
+            } while (choice <= 12);
 
         }
     }
